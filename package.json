@@ -2,11 +2,11 @@
   "name": "7-EcmaScript2015",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "./src/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "server": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }
