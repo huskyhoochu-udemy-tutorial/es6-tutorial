@@ -20,5 +20,8 @@ function driverLicence6(passedTest) {
 
 driverLicence6(true);
 
+// Blocks and IIFEs
+
 /***/ })
 ],[0]);
+//# sourceMappingURL=main.2811077c3f128612707d.js.map

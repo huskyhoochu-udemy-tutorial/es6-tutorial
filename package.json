@@ -5,7 +5,8 @@
   "main": "./src/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
     "start": "webpack-dev-server"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "html-webpack-plugin": "^2.30.1",
+    "rimraf": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }
