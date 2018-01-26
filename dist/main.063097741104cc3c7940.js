@@ -1,3 +1,12 @@
+webpackJsonp([0],[
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 // let and const
 /*
 function driverLicence6(passedTest) {
@@ -84,16 +93,25 @@ new Person('john').myFriends(friends);
 
 // Destructuring
 
-const [name, year] = ['John', 26];
+var name = 'John',
+    year = 26;
+
 console.log(name);
 console.log(year);
 
 function calcAgeRetirement(years) {
-  const age = new Date().getFullYear() - years;
+  var age = new Date().getFullYear() - years;
   return [age, 65 - age];
 }
 
-const [age2, retirement] = calcAgeRetirement(1991);
+var _calcAgeRetirement = calcAgeRetirement(1991),
+    _calcAgeRetirement2 = _slicedToArray(_calcAgeRetirement, 2),
+    age2 = _calcAgeRetirement2[0],
+    retirement = _calcAgeRetirement2[1];
+
 console.log(age2);
 console.log(retirement);
 
+/***/ })
+],[0]);
+//# sourceMappingURL=main.063097741104cc3c7940.js.map
