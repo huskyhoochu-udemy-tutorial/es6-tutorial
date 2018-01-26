@@ -83,7 +83,7 @@ new Person('john').myFriends(friends);
 */
 
 // Destructuring
-
+/*
 const [name, year] = ['John', 26];
 console.log(name);
 console.log(year);
@@ -96,4 +96,27 @@ function calcAgeRetirement(years) {
 const [age2, retirement] = calcAgeRetirement(1991);
 console.log(age2);
 console.log(retirement);
+*/
+
+// Arrays
+/*
+const boxes = document.querySelectorAll('.box');
+
+const boxesArr = Array.from(boxes);
+boxesArr.forEach((cur) => { cur.style.backgroundColor = 'dodgerblue'; });
+
+// for (const idx of boxesArr) {
+//   if (boxesArr.className === 'box blue') {
+//     continue;
+//   }
+//   idx.textContent = 'Husky!';
+// }
+
+boxesArr.map((idx) => { idx.textContent = 'Husky!'; return idx; });
+
+const ages = [12, 17, 8, 21, 14, 11];
+
+console.log(ages.findIndex(item => item >= 18)); // 3 (인덱스)
+console.log(ages.find(item => item >= 18)); // 21 (값 자체)
+*/
 
