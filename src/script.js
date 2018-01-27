@@ -193,7 +193,7 @@ question.forEach((key, value) => (console.log(`${key}: ${value}`)));
 */
 
 // Classes
-
+/*
 class Person {
   constructor(name, yearOfBirth, job) {
     this.name = name;
@@ -215,3 +215,37 @@ const john = new Person('John', 1990, 'teacher');
 console.log(john);
 console.log(john.calculateAge());
 Person.greeting();
+*/
+
+// Classes with Subclass
+/*
+class Person {
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    return new Date().getFullYear() - this.yearOfBirth;
+  }
+}
+
+class Athlete extends Person {
+  constructor(name, yearOfBirth, job, olympic, medals) {
+    super(name, yearOfBirth, job);
+    this.olymplic = olympic;
+    this.medals = medals;
+  }
+
+  wonMedal() {
+    this.medals = this.medals + 1;
+    return this.medals;
+  }
+}
+
+const johnAthlete = new Athlete('John', 1990, 'swimmer', 3, 10);
+console.log(johnAthlete.wonMedal());
+console.log(johnAthlete.calculateAge());
+*/
+
