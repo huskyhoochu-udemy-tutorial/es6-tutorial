@@ -3,8 +3,6 @@ webpackJsonp([0],[
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
 // let and const
 /*
 function driverLicence6(passedTest) {
@@ -127,18 +125,136 @@ console.log(ages.findIndex(item => item >= 18)); // 3 (인덱스)
 console.log(ages.find(item => item >= 18)); // 21 (값 자체)
 */
 
+// The Spread Operator
+/*
 function addFourAges(a, b, c, d) {
   return a + b + c + d;
 }
 
-var sum1 = addFourAges(18, 30, 12, 21);
+const sum1 = addFourAges(18, 30, 12, 21);
 
 console.log(sum1);
 
-var ages = [18, 30, 12, 21];
-var max3 = addFourAges.apply(undefined, ages); // ...이 인자 묶음 역할을 하는 듯
+const ages = [18, 30, 12, 21];
+const max3 = addFourAges(...ages); // ...이 인자 묶음 역할을 하는 듯
 console.log(max3);
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+
+Array.from(all).forEach((cur) => {
+  const style = cur;
+  style.style.color = 'purple';
+});
+*/
+
+// Rest parameters
+/*
+function isFullAge(...args) {
+  console.log(args);
+}
+
+isFullAge(1990, 1999, 1965);
+*/
+
+// Default parameters
+/*
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'Korea') {
+  this.firstName = firstName;
+  this.yearOfBirth = yearOfBirth;
+  this.lastName = lastName;
+  this.nationality = nationality;
+}
+
+const john = new SmithPerson('john', 1990);
+const emily = new SmithPerson('emily', 1990, 'Grand', 'Japan');
+
+console.log(john);
+console.log(emily);
+*/
+
+// Maps
+/*
+const question = new Map();
+question.set('question', 'What is th official name of the latest major JavaScript version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+
+question.set(true, 'Correct answer!');
+question.set(false, 'Wrong, Please try again.');
+
+console.log(question.get('question'));
+
+question.delete(4);
+question.delete(4);
+
+console.log(question.entries());
+
+question.forEach((key, value) => (console.log(`${key}: ${value}`)));
+*/
+
+// Classes
+/*
+class Person {
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    return new Date().getFullYear() - this.yearOfBirth;
+  }
+
+  static greeting() {
+    console.log('Hey there!');
+  }
+}
+
+const john = new Person('John', 1990, 'teacher');
+
+console.log(john);
+console.log(john.calculateAge());
+Person.greeting();
+*/
+
+// Classes with Subclass
+/*
+class Person {
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    return new Date().getFullYear() - this.yearOfBirth;
+  }
+}
+
+class Athlete extends Person {
+  constructor(name, yearOfBirth, job, olympic, medals) {
+    super(name, yearOfBirth, job);
+    this.olymplic = olympic;
+    this.medals = medals;
+  }
+
+  wonMedal() {
+    this.medals = this.medals + 1;
+    return this.medals;
+  }
+}
+
+const johnAthlete = new Athlete('John', 1990, 'swimmer', 3, 10);
+console.log(johnAthlete.wonMedal());
+console.log(johnAthlete.calculateAge());
+*/
+
 
 /***/ })
 ],[0]);
-//# sourceMappingURL=main.11e7f317e947342591b2.js.map
+//# sourceMappingURL=main.91e54e54806519bcae51.js.map
