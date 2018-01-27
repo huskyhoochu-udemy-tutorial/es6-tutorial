@@ -145,9 +145,26 @@ Array.from(all).forEach((cur) => {
 */
 
 // Rest parameters
-
+/*
 function isFullAge(...args) {
   console.log(args);
 }
 
 isFullAge(1990, 1999, 1965);
+*/
+
+// Default parameters
+/*
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'Korea') {
+  this.firstName = firstName;
+  this.yearOfBirth = yearOfBirth;
+  this.lastName = lastName;
+  this.nationality = nationality;
+}
+
+const john = new SmithPerson('john', 1990);
+const emily = new SmithPerson('emily', 1990, 'Grand', 'Japan');
+
+console.log(john);
+console.log(emily);
+*/
