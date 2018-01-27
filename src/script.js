@@ -120,6 +120,8 @@ console.log(ages.findIndex(item => item >= 18)); // 3 (인덱스)
 console.log(ages.find(item => item >= 18)); // 21 (값 자체)
 */
 
+// The Spread Operator
+/*
 function addFourAges(a, b, c, d) {
   return a + b + c + d;
 }
@@ -140,3 +142,12 @@ Array.from(all).forEach((cur) => {
   const style = cur;
   style.style.color = 'purple';
 });
+*/
+
+// Rest parameters
+
+function isFullAge(...args) {
+  console.log(args);
+}
+
+isFullAge(1990, 1999, 1965);
