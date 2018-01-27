@@ -191,3 +191,27 @@ console.log(question.entries());
 
 question.forEach((key, value) => (console.log(`${key}: ${value}`)));
 */
+
+// Classes
+
+class Person {
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    return new Date().getFullYear() - this.yearOfBirth;
+  }
+
+  static greeting() {
+    console.log('Hey there!');
+  }
+}
+
+const john = new Person('John', 1990, 'teacher');
+
+console.log(john);
+console.log(john.calculateAge());
+Person.greeting();
