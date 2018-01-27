@@ -120,3 +120,23 @@ console.log(ages.findIndex(item => item >= 18)); // 3 (인덱스)
 console.log(ages.find(item => item >= 18)); // 21 (값 자체)
 */
 
+function addFourAges(a, b, c, d) {
+  return a + b + c + d;
+}
+
+const sum1 = addFourAges(18, 30, 12, 21);
+
+console.log(sum1);
+
+const ages = [18, 30, 12, 21];
+const max3 = addFourAges(...ages); // ...이 인자 묶음 역할을 하는 듯
+console.log(max3);
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+
+Array.from(all).forEach((cur) => {
+  const style = cur;
+  style.style.color = 'purple';
+});

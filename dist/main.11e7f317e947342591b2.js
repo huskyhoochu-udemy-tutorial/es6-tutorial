@@ -3,6 +3,8 @@ webpackJsonp([0],[
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
 // let and const
 /*
 function driverLicence6(passedTest) {
@@ -125,7 +127,18 @@ console.log(ages.findIndex(item => item >= 18)); // 3 (인덱스)
 console.log(ages.find(item => item >= 18)); // 21 (값 자체)
 */
 
+function addFourAges(a, b, c, d) {
+  return a + b + c + d;
+}
+
+var sum1 = addFourAges(18, 30, 12, 21);
+
+console.log(sum1);
+
+var ages = [18, 30, 12, 21];
+var max3 = addFourAges.apply(undefined, ages); // ...이 인자 묶음 역할을 하는 듯
+console.log(max3);
 
 /***/ })
 ],[0]);
-//# sourceMappingURL=main.9125f3f87d0fd88f490e.js.map
+//# sourceMappingURL=main.11e7f317e947342591b2.js.map
